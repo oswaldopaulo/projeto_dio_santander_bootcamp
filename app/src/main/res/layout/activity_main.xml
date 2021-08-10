@@ -18,9 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
-    <include layout="@layout/ampty_state"
-        android:id="@+id/include_empty"
-        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_tasks"
         android:layout_width="match_parent"

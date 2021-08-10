@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         updateList()
 
         insertListeners()
-
+        //DATA STORE
+        //ROOM
     }
 
     private fun insertListeners() {
@@ -49,8 +50,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateList() {
         val list = TaskDataSource.getList()
-        binding.includeEmpty.emptyState.visibility = if (list.isEmpty()) View.VISIBLE
-        else View.GONE
+       // binding.includeEmpty.emptyState.visibility = if (list.isEmpty()) View.VISIBLE
+      //  else View.GONE
 
         adapter.submitList(list)
     }
