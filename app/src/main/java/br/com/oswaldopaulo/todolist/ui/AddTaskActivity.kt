@@ -1,6 +1,7 @@
 package br.com.oswaldopaulo.todolist.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TimePicker
 import androidx.appcompat.app.AppCompatActivity
 import br.com.oswaldopaulo.todolist.databinding.ActivityAddTaskBinding
@@ -41,9 +42,13 @@ class AddTaskActivity : AppCompatActivity() {
             val timePicker = MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
                     .build()
+
             timePicker.addOnPositiveButtonClickListener {
                 binding.tilHour.text = "${timePicker.hour} ${timePicker.minute}"
+
             }
+
+            timePicker.show(supportFragmentManager, null)
         }
 
         binding.btnCancel.setOnClickListener{
